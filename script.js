@@ -34,11 +34,10 @@ const displayPopularMovies = () => {
 const createMovieCard = (movie) => {
   const movieCard = document.createElement('div');
   movieCard.classList.add('movie-card');  // class생성
-  movieCard.addEventListener('click', function () {
-    alert(`Title : ${movie.title},  ID : ${movie.id}`);
-  });
-  const imageUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : 'https://via.placeholder.com/200x300';
 
+  movieCard.addEventListener('click', handleClickCard);
+
+  const imageUrl = movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : 'https://via.placeholder.com/200x300';
 
   movieCard.innerHTML = `
   <div class="card">
@@ -53,8 +52,19 @@ const createMovieCard = (movie) => {
           <p class="cardavg">Vote average : ${movie.vote_average}</p>
       </div></div>
   </div>`;
+
+  
   return movieCard;
 }
+
+// 영화카드 클릭시 처리하는 함수
+const handleClickCard = ({target}) => {
+    const movieCard = target.closest('.movie-card'); // 클릭된 요소가 movie-card 클래스를 가진 부모 요소를 찾음
+    if (!movieCard) return; // 부모 요소가 없으면 함수 종료
+  
+    alert('hello'); // 여기에 상세정보 창 띄우는 로직 작성하면 될거같습니다.
+  }
+
 
 // 입력된 검색어 기반으로 영화 검색 하는 함수
 const searchMovies = (searchTerm)=> {
@@ -110,5 +120,4 @@ document.addEventListener('DOMContentLoaded',fetchPopularMovies);
       }
     }
   });
-
 
