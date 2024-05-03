@@ -43,17 +43,28 @@ export const createMovieCard = async () => {
   sortbtn.addEventListener('click', function ({ target }) {
     if (target === sortbtn) return;
 
-    if (target.matches('#grade-sort')) {
+    else if (target.matches('#grade-sort')) {
       movies.sort((a, b) => b.vote_average - a.vote_average);
       makeCard();
     }
     else if (target.matches('#title-sort')) {
-      console.log(movies);
-      movies.title.sort();
-      console.log(movies);
+      movies.sort((a, b) => {
+        const Atitle = a.title;
+        const Btitle = b.title;
+        if (Atitle > Btitle) {
+          return 1;
+        }
+        else if (Atitle < Btitle) {
+          return -1;
+        }
+        return 0;
+      });
+      makeCard();
     }
     else if (target.matches('#fame-sort')) {
-      alert('인기순버튼');
+
+      movies.sort((a, b) => b.popularity - a.popularity);
+      makeCard();
     }
   });
 };
