@@ -29,8 +29,10 @@ export const createMovieCard = async() => {
 
     if(target.matches(".card")){
       alert("hello");
+    }else {
+      alert("hello"); // 여기에 상세정보 창 띄우는 로직 작성하면 될거같습니다.
     }
-     // 여기에 상세정보 창 띄우는 로직 작성하면 될거같습니다.
+     
   };
 };
 
