@@ -1,5 +1,5 @@
 export const movieSearch = (searchKeyword) => {
-    const movieCards = document.querySelectorAll(".movie-card");
+    const movieCards = document.querySelectorAll(".card");
   
     movieCards.forEach((card) => {
       const title = card.querySelector(".cardtitle").textContent.toLowerCase();
