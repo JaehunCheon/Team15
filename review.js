@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>영화 리뷰</title>
-</head>
-<body>
-
-<h1>관람객 리뷰</h1>
-
-<!-- 리뷰 작성 양식 -->
-<form id="reviewForm">
-    <label for="authorName">이름을 입력하세요</label><br>
-    <input type="text" id="authorName" name="authorName" required><br>
-    <label for="reviewContent">리뷰 내용:</label><br>
-    <textarea id="reviewContent" name="reviewContent" rows="4" cols="50" required></textarea><br>
-    <label for="confirmPassword">확인 비밀번호:</label><br>
-    <input type="password" id="confirmPassword" name="confirmPassword" required><br>
-    <button type="submit">저장</button>
-</form>
-
-<div id="reviewList">
-    <h2>리뷰 목록</h2>
-    <ul id="reviews"></ul>
-</div>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const reviewForm = document.getElementById('reviewForm');
@@ -95,6 +67,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-
-</body>
-</html>
