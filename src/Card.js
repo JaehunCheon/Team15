@@ -1,4 +1,4 @@
-export const createMovieCard = async  () => {
+export const createMovieCard = async () => {
   const movies = await fetchPopularMovies();
   const movieCard = document.querySelector("#card-list");
 
@@ -34,7 +34,7 @@ export const createMovieCard = async  () => {
     const detailPageURL = `detail/detail.html?id=${movieId}`;
     window.location.href = detailPageURL;
   });
-};//페이지 이동이 안 되는 오류:movie를 인식하지 못해 함수 밖으로 뺌
+};//페이지 이동이 안 되는 오류 : movie를 인식하지 못해 함수 밖으로 뺌
 
 
 // 메인 페이지에 출력될 카드 이미지, 데이터 가져오기

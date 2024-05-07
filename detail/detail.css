@@ -1,7 +1,9 @@
+
 h1{
     border: 1px solid black;
-    
-    padding-left: 500px;
+    padding-left: 400px;
+    margin-left: 100px;
+    width: 650px;
 }
 #movieImg{
     width: 350px;
@@ -15,8 +17,8 @@ h1{
     display: grid;
     grid-template-columns: 700px 400px 100px;
 
-    border-bottom: 1px solid black;
-
+    border: 1px solid black;
+    width: 1300px;
     height: 500px;
 }
 #detailCard{
@@ -28,16 +30,14 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.fontBox{
-    overflow: hidden;
-    white-space: nowrap;
-}
 #review-box{
     margin: 30px 0 10px 300px;
     border: 1px solid black;
     border-radius: 10px;
+    padding: 10px 50px 10px 50px;
     width: 700px;
     height: 200px;
+
     overflow: auto;
 
     font-size: larger;
@@ -58,8 +58,20 @@ h1{
     margin: 0 0 20px 450px;
     height: 30px;
 }
-
+.review-text{
+    display: flex;
+    
+}
+.review-text p{
+    margin-right: 40px;
+    height: 10px;
+}
 #name-input,
 #pw-input{
     width: 100px;
+}
+#fix-btn,
+#fix-pw{
+    margin-left: 10px;
+    width: 70px;
 }
