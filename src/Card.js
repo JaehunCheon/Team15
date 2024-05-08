@@ -8,12 +8,11 @@ export const createMovieCard = async () => {
 
   //버튼별 정렬 기능
   sortbtn.addEventListener("click", function ({ target }) {
-    const mainTitle = document.getElementById("main-title");
     if (target === sortbtn) return; //버튼 외 구역 클릭 시 리턴
     //평점순으로 정렬
     else if (target.matches("#grade-sort")) {
       movies.sort((a, b) => b.vote_average - a.vote_average);
-      mainTitle.innerHTML = `Popular Movies : 평점순`
+      
       makeCard(movieCard, movies);
     }
     //제목순으로 정렬
@@ -28,13 +27,11 @@ export const createMovieCard = async () => {
         }
         return 0;
       });
-      mainTitle.innerHTML = `Popular Movies : 제목순`;
       makeCard(movieCard, movies);
     }
     //인기순으로 정렬
     else if (target.matches("#fame-sort")) {
       movies.sort((a, b) => b.popularity - a.popularity);
-      mainTitle.innerHTML = `Popular Movies : 인기순`
       makeCard(movieCard, movies);
     }
   });
