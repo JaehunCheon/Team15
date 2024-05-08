@@ -41,8 +41,10 @@ h1{
 }
 #review-box{
     display: flex;
+    flex-direction: column;
     justify-self: center;
-     margin: 30px;
+    margin: 30px;
+    padding: 5px 30px 5px 30px;
     border: 1px solid black;
     border-radius: 10px;
     width: 50%;
