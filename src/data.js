@@ -11,9 +11,11 @@ export function addReview(movieId) {
     displayReview(reviewData, movieId, existReviews);
   });
   // 클릭, 엔터 입력시 데이터 추가 (addData => 데이터 추가하는 함수)
-  reviewBtn.addEventListener("click", () => addData(movieId,existReviews))
-  reviewInput.addEventListener("keypress", function(event){
-    if(event.key === "Enter"){ addData(movieId, existReviews)}
+  reviewBtn.addEventListener("click", () => addData(movieId, existReviews));
+  reviewInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      addData(movieId, existReviews);
+    }
   });
 }
 
@@ -63,18 +65,18 @@ function displayReview(reviewData, movieId, existReviews) {
         const changeR = prompt("수정할 내용: ");
         localStorage.getItem(`${movieId}_리뷰.리뷰`);
         let newReview = JSON.parse(localStorage.getItem(`${movieId}_리뷰`));
-        let newReview1 = newReview.map((obj) =>{
-          if(inputPW === reviewData.비밀번호){
+        let newReview1 = newReview.map((obj) => {
+          if (inputPW === reviewData.비밀번호) {
             return {
               ...obj,
               리뷰: changeR,
             };
-          };
+          }
         });
         JSON.stringify(newReview1);
         localStorage.setItem(`${movieId}_리뷰`, JSON.stringify(newReview1));
         // 새로고침 후 수정
-        alert('수정되었습니다.');
+        alert("수정되었습니다.");
         location.reload();
       } else {
         alert("비밀번호가 일치하지 않습니다.");
@@ -111,14 +113,13 @@ function addData(movieId, existReviews) {
     document.getElementById("pw-input").value = "";
     document.getElementById("review-input").value = "";
   }
-};
+}
 
 // 메인페이지로 이동하는 함수
-export function toMain(){
+export function toMain() {
   const toMainBtn = document.getElementById("btn1");
   toMainBtn.addEventListener("click", function (event) {
-
     const mainPageURL = `Index.html`;
     window.location.href = mainPageURL;
   });
-};
+}
