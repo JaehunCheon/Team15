@@ -1,0 +1,75 @@
+h1{
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    
+}
+#movieImg{
+    width: 350px;
+    height: 400px;
+    display:flex;
+    justify-self:center;
+    margin-left: 180px;
+    
+    left: 160px;
+    top: 20px;
+}
+
+#movieDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid black;
+
+    height: 500px;
+    
+}
+#detailCard{
+    display: grid;
+    grid-template-rows: 70px 70px 1fr;
+    
+}
+.date-avg{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.fontBox{
+    
+    width: 250px;
+    word-wrap: break-word;
+}
+#review-box{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin: 30px;
+    padding: 5px 30px 5px 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 200px;
+   
+
+    font-size: larger;
+}
+#review-box::-webkit-scrollbar{
+    width: 5px;
+}
+#review-box::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+#review-box::-webkit-scrollbar-track{
+    background-color: grey;
+    border-radius: 10px;
+}
+#write{
+    display: flex;
+    justify-content:center ;
+}
+
+#name-input,
+#pw-input{
+    width: 100px;
+}
