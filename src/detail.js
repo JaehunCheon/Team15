@@ -1,4 +1,4 @@
-import { addReview } from "./data.js";
+import { addReview, toMain } from "./data.js";
 // URL에서Id를 가져오는 함수
 function getMovieId() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -25,6 +25,8 @@ async function displayMovieDetail() {
   </ul>`;
 
   addReview(movieId);
+
+  toMain();
 }
 
 // movieId 값에대한 영화데이터 가져오는 함수

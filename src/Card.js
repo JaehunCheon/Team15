@@ -66,7 +66,7 @@ movieCard.addEventListener("click", function (event) {
   if (!target) return; // 부모 요소가 없으면 함수 종료
 
     const movieId = target.dataset.movieId;
-    const detailPageURL = `detail/detail.html?id=${movieId}`;
+    const detailPageURL = `detail.html?id=${movieId}`;
     window.location.href = detailPageURL;
   });
 };//페이지 이동이 안 되는 오류 : movie를 인식하지 못해 함수 밖으로 뺌

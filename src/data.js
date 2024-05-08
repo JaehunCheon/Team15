@@ -109,3 +109,13 @@ function displayReview(reviewData, movieId, existReviews) {
   reviewList.appendChild(changeBtn);
   reviewBox.appendChild(reviewList);
 }
+
+
+export function toMain(){
+  const toMainBtn = document.getElementById("btn1");
+  toMainBtn.addEventListener("click", function (event) {
+
+    const mainPageURL = `Index.html`;
+    window.location.href = mainPageURL;
+  });
+}
