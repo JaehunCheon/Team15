@@ -83,21 +83,21 @@ function displayReview(reviewData, movieId, existReviews) {
         localStorage.getItem(`${movieId}_리뷰.리뷰`);
         let newReview = JSON.parse(localStorage.getItem(`${movieId}_리뷰`));
         console.log(changeR);
-        newReview = newReview.map(() =>{
+        let newReview1 = newReview.map((obj) =>{
           if(inputPW === reviewData.비밀번호){
             console.log('여기 들어옴');
             return {
-              ...newReview,
+              ...obj,
               리뷰: changeR,
-            }
-          }
-        })
-        console.log(newReview);
-        JSON.stringify(newReview);
-        //localStorage.setItem(`${movieId}_리뷰`);
+            };
+          };
+        });
+        console.log(newReview1);
+        JSON.stringify(newReview1);
+        localStorage.setItem(`${movieId}_리뷰`, JSON.stringify(newReview1));
         // 새로고침 후 수정
         alert('수정되었습니다.');
-        //location.reload();
+        location.reload();
       } else {
         alert("비밀번호가 일치하지 않습니다.");
       }
@@ -105,8 +105,8 @@ function displayReview(reviewData, movieId, existReviews) {
   });
 
   // 리뷰 목록에 추가
-  reviewList.appendChild(deleteBtn);
   reviewList.appendChild(changeBtn);
+  reviewList.appendChild(deleteBtn);
   reviewBox.appendChild(reviewList);
 }
 
