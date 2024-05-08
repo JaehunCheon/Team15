@@ -82,17 +82,14 @@ function displayReview(reviewData, movieId, existReviews) {
         const changeR = prompt("수정할 내용: ");
         localStorage.getItem(`${movieId}_리뷰.리뷰`);
         let newReview = JSON.parse(localStorage.getItem(`${movieId}_리뷰`));
-        console.log(changeR);
         let newReview1 = newReview.map((obj) =>{
           if(inputPW === reviewData.비밀번호){
-            console.log('여기 들어옴');
             return {
               ...obj,
               리뷰: changeR,
             };
           };
         });
-        console.log(newReview1);
         JSON.stringify(newReview1);
         localStorage.setItem(`${movieId}_리뷰`, JSON.stringify(newReview1));
         // 새로고침 후 수정
