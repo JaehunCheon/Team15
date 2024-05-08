@@ -40,16 +40,17 @@ h1{
     word-wrap: break-word;
 }
 #review-box{
+    background-color: aqua;
     display: flex;
     justify-self: center;
      margin: 30px;
     border: 1px solid black;
     border-radius: 10px;
-    width: 50%;
+    width: 60%;
     height: 200px;
    
 
-    font-size: larger;
+    font-size:medium;
 }
 #review-box::-webkit-scrollbar{
     width: 5px;
@@ -63,6 +64,8 @@ h1{
     border-radius: 10px;
 }
 #write{
+    background-color: aquamarine;
+    height: 50px;
     display: flex;
     justify-content:center ;
 }
