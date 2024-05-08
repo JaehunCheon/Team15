@@ -13,5 +13,5 @@ form.addEventListener("submit", (event) => {
 });
 
 document.getElementById('reloadButton').addEventListener('click', function(){
-  alert('hello');
+  location.reload();
 })

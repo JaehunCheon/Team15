@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>영화 상세 정보</title>
-  <script type="module" src="./detail.js"></script>
-  <link rel="stylesheet" href="detail.css" (type="text/css" ) />
-  <script type="module" src="../src/review1.js"></script>
-
-</head>
-
-<body>
-  <button id="btn1" onclick="history.back();">메인으로</button>
-  <h1>영화 상세 정보</h1>
-  <div id="movieDetails">
-
-    <img id="movieImg" src="" />
-    <ul id="detailCard">
-      <h2 id="movieTitle">Title</h2>
-      <div class="date-avg">
-        <p id="releaseDate">영화 개봉일:</p>
-        <p>영화 평점:</p>
-      </div>
-
-      <p>영화 줄거리</p>
-      <br />
-    </ul>
-  </div id="bigbox">
-  <div id="write">
-    <input id="name-input" placeholder="작성자" />
-    <input id="pw-input" placeholder="비밀번호" />
-    <input id="review-input" placeholder="리뷰를작성하시오" />
-    <button id="review-btn">리뷰등록</button>
-  </div>
-  <ul id="review-box"></ul>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 상세 정보</title>
+    <script type="module" src="./detail.js"></script>
+    <link rel="stylesheet" href="detail.css" (type="text/css" ) />
+    
+  </head>
+  <body>
+    <button id = "btn1" onclick="history.back();">메인으로</button>
+    <h1>영화 상세 정보</h1>
+    <div id="movieDetails">
+    </div>
+    <div id="review-box"></div>
+    <div id="write">
+      <input id="name-input" placeholder="작성자" />
+      <input id="pw-input" placeholder="비밀번호" />
+      <input id="review-input" placeholder="리뷰를작성하시오" />
+      <button id="review-btn">리뷰등록</button>
+    </div>
+  </body>
 </html>
