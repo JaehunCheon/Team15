@@ -18,7 +18,6 @@ export function addReview(movieId) {
     }
   });
 }
-
 // 저장된 리뷰를 화면에 표시하는 함수
 function displayReview(reviewData, movieId, existReviews) {
   const reviewBox = document.getElementById("review-box");
@@ -47,7 +46,6 @@ function displayReview(reviewData, movieId, existReviews) {
       }
     }
   });
-
   //수정 버튼 추가
   const changeBtn = document.createElement("button");
   changeBtn.textContent = "수정";
@@ -84,7 +82,6 @@ function displayReview(reviewData, movieId, existReviews) {
       }
     }
   });
-
   // 리뷰 목록에 추가
   reviewList.appendChild(changeBtn);
   reviewList.appendChild(deleteBtn);
