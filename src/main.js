@@ -11,6 +11,3 @@ form.addEventListener("submit", (event) => {
   movieSearch(searchInput.value);
 });
 
-document.getElementById('reloadButton').addEventListener('click', function(){
-  location.reload();
-})

@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
+    
+    <script src="https://kit.fontawesome.com/4df8432e85.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popular Movies</title>
+    <title>spartcha</title>
     <link rel="stylesheet" href="../css/index.css" (type="text/css")>
     <script type= "module" src="../src/main.js"></script>
    
 </head>
 <body>
     <header>
-        <button id="reloadButton" type="button">메인으로</button>
-        <h1 id = "main-title" style="text-align: center;">Popular Movies</h1>
+        <h1 id = "main-title" style="text-align: center;">spartcha</h1>
     </header>
     <form id="search-form">
         <div id="sort-btn">
@@ -20,9 +21,9 @@
         <button id="title-sort">제목순</button>
         <button id="fame-sort">인기순</button>
         </div>
-        <label>영화 검색 : </label>
+    
         <input name="searchValue" type="text" id="search-input" placeholder="영화 제목을 검색해 보세요" />
-        <button type="submit" id="search-btn">검색</button>
+        <button type="submit" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
         
     </form>
     <ul id="card-list"></ul>
