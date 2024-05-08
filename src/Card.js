@@ -1,3 +1,4 @@
+// 받아온 데이터로 카드 생성하는 함수
 export const createMovieCard = async () => {
   const movies = await fetchPopularMovies();
   const movieCard = document.querySelector("#card-list");
@@ -44,7 +45,7 @@ export const createMovieCard = async () => {
   });
 };
 
-//정렬 클릭 때마다 호출해야돼서 함수로 변경
+// 카드 출력해주는 함수
 const makeCard = function (movieCard, movies) {
   movieCard.innerHTML = movies
     .map(
