@@ -25,11 +25,6 @@ async function displayMovieDetail() {
   </ul>`;
 
   addReview(movieId);
-
-
-  const reviewBox = document.getElementById("review-box");
-
-
 }
 
 // movieId 값에대한 영화데이터 가져오는 함수
