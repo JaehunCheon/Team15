@@ -15,9 +15,15 @@
         <h1 style="text-align: center;">최고 평점 영화</h1>
     </header>
     <form id="search-form">
+        <div id="sort-btn">
+        <button id="grade-sort">평점순</button>
+        <button id="title-sort">제목순</button>
+        <button id="fame-sort">인기순</button>
+        </div>
         <label>영화 검색 : </label>
         <input name="searchValue" type="text" id="search-input" placeholder="영화 제목을 검색해 보세요" />
         <button type="submit" id="search-btn">검색</button>
+        
     </form>
     <ul id="card-list"></ul>
     

@@ -1,10 +1,13 @@
 export const createMovieCard = async () => {
   const movies = await fetchPopularMovies();
   const movieCard = document.querySelector("#card-list");
+  const sortbtn = document.querySelector('#sort-btn');
 
-  movieCard.innerHTML = movies
-    .map(
-      (movie) => `
+  //정렬 클릭 때마다 호출해야돼서 함수로 변경
+  const makeCard = function () {
+    movieCard.innerHTML = movies
+      .map(
+        (movie) => `
     <div class="card" data-movie-id="${movie.id}">
       <div class="imgbox">
         <img src="https://image.tmdb.org/t/p/w200${movie.poster_path}" class="card-img-top" alt="${movie.title}">
@@ -21,14 +24,46 @@ export const createMovieCard = async () => {
         </div>
       </div>
     </div>`
-    )
-    .join("");
+      )
+      .join("");
+  }
+  makeCard();
 
-  // 영화카드 클릭시 처리하는 함수
-  movieCard.addEventListener("click", function (event) {
-    const target = event.target.closest('.card');
-    if (!target) return; // 부모 요소가 없으면 함수 종료
+  //버튼별 정렬 기능
+  sortbtn.addEventListener('click', function ({ target }) {
+    if (target === sortbtn) return; //버튼 외 구역 클릭 시 리턴
 
+    //평점순으로 정렬
+    else if (target.matches('#grade-sort')) {
+      movies.sort((a, b) => b.vote_average - a.vote_average);
+      makeCard();
+    }
+    //제목순으로 정렬
+    else if (target.matches('#title-sort')) {
+      movies.sort((a, b) => {
+        const Atitle = a.title;
+        const Btitle = b.title;
+        if (Atitle > Btitle) {
+          return 1;
+        }
+        else if (Atitle < Btitle) {
+          return -1;
+        }
+        return 0;
+      });
+      makeCard();
+    }
+    //인기순으로 정렬
+    else if (target.matches('#fame-sort')) {
+
+      movies.sort((a, b) => b.popularity - a.popularity);
+      makeCard();
+    }
+  });
+// 영화카드 클릭시 처리하는 함수
+movieCard.addEventListener("click", function (event) {
+  const target = event.target.closest('.card');
+  if (!target) return; // 부모 요소가 없으면 함수 종료
 
     const movieId = target.dataset.movieId;
     const detailPageURL = `detail.html?id=${movieId}`;

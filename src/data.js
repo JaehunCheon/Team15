@@ -65,8 +65,48 @@ function displayReview(reviewData, movieId, existReviews) {
     }
   });
 
+  //수정 버튼 추가
+  const changeBtn = document.createElement("button");
+  changeBtn.textContent = "수정";
+
+  changeBtn.addEventListener("click", function () {
+    const index = existReviews.findIndex(
+      (item) =>
+        item.작성자 === reviewData.작성자 && item.리뷰 === reviewData.리뷰
+    );
+    if (index !== -1) {
+      // 비밀번호 확인
+      const inputPW = prompt("비밀번호를 입력하세요 : ");
+      if (inputPW === reviewData.비밀번호) {
+        // 비밀번호 일치시 해당 리뷰 수정
+        const changeR = prompt("수정할 내용: ");
+        localStorage.getItem(`${movieId}_리뷰.리뷰`);
+        let newReview = JSON.parse(localStorage.getItem(`${movieId}_리뷰`));
+        console.log(changeR);
+        newReview = newReview.map(() =>{
+          if(inputPW === reviewData.비밀번호){
+            console.log('여기 들어옴');
+            return {
+              ...newReview,
+              리뷰: changeR,
+            }
+          }
+        })
+        console.log(newReview);
+        JSON.stringify(newReview);
+        //localStorage.setItem(`${movieId}_리뷰`);
+        // 새로고침 후 수정
+        alert('수정되었습니다.');
+        //location.reload();
+      } else {
+        alert("비밀번호가 일치하지 않습니다.");
+      }
+    }
+  });
+
   // 리뷰 목록에 추가
   reviewList.appendChild(deleteBtn);
+  reviewList.appendChild(changeBtn);
   reviewBox.appendChild(reviewList);
 }
 
