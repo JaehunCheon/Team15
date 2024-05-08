@@ -63,18 +63,19 @@ function displayReview(reviewData, movieId, existReviews) {
       if (inputPW === reviewData.비밀번호) {
         // 비밀번호 일치시 해당 리뷰 수정
         const changeR = prompt("수정할 내용: ");
-        localStorage.getItem(`${movieId}_리뷰.리뷰`);
-        let newReview = JSON.parse(localStorage.getItem(`${movieId}_리뷰`));
-        let newReview1 = newReview.map((obj) => {
-          if (inputPW === reviewData.비밀번호) {
+        
+        let newReview = existReviews.map((obj) => {
+          if (obj.작성자 === reviewData.작성자 && obj.리뷰 === reviewData.리뷰) {
             return {
               ...obj,
               리뷰: changeR,
             };
+          }else {
+            return obj;
           }
         });
-        JSON.stringify(newReview1);
-        localStorage.setItem(`${movieId}_리뷰`, JSON.stringify(newReview1));
+        JSON.stringify(newReview);
+        localStorage.setItem(`${movieId}_리뷰`, JSON.stringify(newReview));
         // 새로고침 후 수정
         alert("수정되었습니다.");
         location.reload();
@@ -118,7 +119,7 @@ function addData(movieId, existReviews) {
 // 메인페이지로 이동하는 함수
 export function toMain() {
   const toMainBtn = document.getElementById("btn1");
-  toMainBtn.addEventListener("click", function (event) {
+  toMainBtn.addEventListener("click", function () {
     const mainPageURL = `Index.html`;
     window.location.href = mainPageURL;
   });
