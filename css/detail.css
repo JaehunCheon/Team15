@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body{
+    background-color: rgb(39, 38, 38);
+}
+
+h1{
+    font-family: "Poetsen One", sans-serif;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    color: rgb(198, 8, 65);
+    margin-top: 0px;
+    margin-bottom: 60px;
+    
+}
+#movieImg{
+    width: 350px;
+    height: 400px;
+    display:flex;
+    justify-self:center;
+    margin-left: 180px;
+    
+    left: 160px;
+    top: 20px;
+}
+
+#movieDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-bottom: 1px solid transparent;
+    color: aliceblue;
+
+    height: 500px;
+    
+}
+#detailCard{
+    display: grid;
+    grid-template-rows: 70px 70px 1fr;
+    
+}
+.date-avg{
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.fontBox{
+    
+    width: 180px;
+    word-wrap: break-word;
+}
+#review-box{
+    margin-left: 20%;
+    
+    padding: 5px 30px 5px 30px;
+    border: 1px solid rgb(84, 84, 84);
+    border-radius: 10px;
+    width: 60%;
+    height: 200px;
+    font-size:medium;
+    color: aliceblue;
+}
+#review-box::-webkit-scrollbar{
+    width: 5px;
+}
+#review-box::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+#review-box::-webkit-scrollbar-track{
+    background-color: rgb(123, 123, 123);
+    border-radius: 10px;
+}
+#write{
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    justify-content:center ;
+    background-color: rgb(39, 38, 38);
+    
+}
+
+#name-input,
+#pw-input{
+    width: 100px;
+    background-color: rgb(45, 44, 44);
+    border: 1px solid aliceblues;
+
+    color: white;
+}
+
+#review-input{
+    background-color: rgb(45, 44, 44);
+    color: white;
+}
+
+#btn1{
+    background-color: transparent;
+    font-size: 30px;
+    border: solid transparent;
+    color: rgb(198, 8, 65);
+
+    position: relative;
+    top: 20%; left: 20%;
+}
+
+#review-btn{
+    color: rgb(198, 8, 65);
+    background-color: transparent;
+    border: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+    color: rgb(183, 183, 183);
+    border: transparent;
+    cursor: pointer;
+}
+li{
+    font-size: 20px;
+}

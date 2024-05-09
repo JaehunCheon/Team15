@@ -1,0 +1,123 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+}
+h1{
+    font-family: "Poetsen One", sans-serif;
+    font-size: 50px;
+    color: rgb(198, 8, 65);
+
+    cursor: pointer;
+}
+
+#card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+
+    background-color: rgba(30, 27, 27, 0.995);
+    padding: 40px;
+
+    margin-top: 70px;
+}
+
+.card {
+    display: grid;
+    margin: 1px solid black;
+
+    border: 1px double rgb(79, 79, 79);
+    border-radius: 9px;
+    width: 320px;
+    height: 800px;
+    margin: 0 15px 40px 15px;
+    cursor: pointer;
+}
+.imgbox{
+    text-align: center;
+    margin-top:10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(79, 79, 79);
+}
+
+.footerbox{
+    border-top: 1px solid rgb(79, 79, 79);
+    font-size: 15px;
+    color: aliceblue;
+}
+.cardtitle{
+    border-bottom: 1px solid rgb(79, 79, 79);
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    color: aliceblue;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.cardoverview{
+    padding-left: 10px;
+    padding-right: 10px;
+    color:aliceblue
+}
+.cardavg,.cardpop{
+    padding-left: 20px;
+}
+#search-form {
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+}
+
+#search-input {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: #000000;
+    border-color: transparent;
+    border-radius: 5px;
+}
+
+#search-btn {
+    padding: 8px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: aliceblue;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+#reloadButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+}
+
+#grade-sort{
+    background-color: #1c1c1c;
+    color: rgb(109, 107, 107);
+    border-radius: 3px;
+}
+
+#title-sort{
+    background-color: #1c1c1c;
+    color: rgb(109, 107, 107);
+    border-radius: 3px;
+}
+
+#fame-sort{
+    background-color: #1c1c1c;
+    color: rgb(109, 107, 107);
+    border-radius: 3px;
+}
